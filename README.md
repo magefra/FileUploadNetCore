@@ -6,7 +6,7 @@
 Install-Package Microsoft.EntityFrameworkCore
 Install-Package Microsoft.EntityFrameworkCore.Design
 Install-Package Microsoft.EntityFrameworkCore.Tools
-Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package MySql.Data.EntityFrameworkCore -Version 8.0.20
 
  ```
  
