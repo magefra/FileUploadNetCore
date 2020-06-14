@@ -9,3 +9,27 @@ Install-Package Microsoft.EntityFrameworkCore.Tools
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
  ```
+ 
+ # Empezar
+ 
+ 1. Agregar la cadena de conexión en el archivo appsetting.json
+ ```
+ "ConnectionStrings": {
+  "DefaultConnection": "<Copia tu conexión aquí>"
+}
+```
+
+2. Configurar el archivo Startup.cs
+```
+services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(
+    Configuration.GetConnectionString("DefaultConnection"),
+    b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+```
+
+3. Hacer la migración y actualizar la base de datos.
+```
+add-migration Initial
+update-database
+```
+
