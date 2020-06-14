@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FileUploadNetCore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200614202832_Initial4")]
-    partial class Initial4
+    [Migration("20200614211008_Initial10")]
+    partial class Initial10
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,8 +28,8 @@ namespace FileUploadNetCore.Migrations
                     b.Property<DateTime?>("CreatedOn")
                         .HasColumnType("datetime");
 
-                    b.Property<string>("Data")
-                        .HasColumnType("text");
+                    b.Property<byte[]>("Data")
+                        .HasColumnType("varbinary(4000)");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");

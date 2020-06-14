@@ -26,8 +26,8 @@ namespace FileUploadNetCore.Migrations
                     b.Property<DateTime?>("CreatedOn")
                         .HasColumnType("datetime");
 
-                    b.Property<string>("Data")
-                        .HasColumnType("text");
+                    b.Property<byte[]>("Data")
+                        .HasColumnType("varbinary(4000)");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");

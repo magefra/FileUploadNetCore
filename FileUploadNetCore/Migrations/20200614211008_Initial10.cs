@@ -4,7 +4,7 @@ using MySql.Data.EntityFrameworkCore.Metadata;
 
 namespace FileUploadNetCore.Migrations
 {
-    public partial class Initial4 : Migration
+    public partial class Initial10 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,7 +20,7 @@ namespace FileUploadNetCore.Migrations
                     Description = table.Column<string>(nullable: true),
                     UploadedBy = table.Column<string>(nullable: true),
                     CreatedOn = table.Column<DateTime>(nullable: true),
-                    Data = table.Column<string>(nullable: true)
+                    Data = table.Column<byte[]>(nullable: true)
                 },
                 constraints: table =>
                 {
