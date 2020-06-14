@@ -35,5 +35,10 @@ add-migration Initial
 update-database
 ```
 
+
+#Final
+
+![projects_dependencies](Resources/Capture.png)
+
 https://www.codewithmukesh.com/blog/entity-framework-core-in-aspnet-core/
 
