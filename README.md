@@ -38,7 +38,7 @@ update-database
 
 #Final
 
-![projects_dependencies](Resources/Capture.png)
+![projects_dependencies](Resources/Capture.PNG)
 
 https://www.codewithmukesh.com/blog/entity-framework-core-in-aspnet-core/
 
