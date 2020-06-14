@@ -21,10 +21,12 @@ Install-Package MySql.Data.EntityFrameworkCore -Version 8.0.20
 
 2. Configurar el archivo Startup.cs
 ```
-services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(
-    Configuration.GetConnectionString("DefaultConnection"),
-    b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+ services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options
+                .UseMySQL(Configuration.GetConnectionString("DefaultConnection"),
+                            b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName));
+            });
 ```
 
 3. Hacer la migración y actualizar la base de datos.
